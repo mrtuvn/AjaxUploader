@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="VES_ImageGallery::imagegallery" title="Image Gallery" module="VES_ImageGallery" sortOrder="10" resource="VES_ImageGallery::imagegallery" />
+        <add id="VES_ImageGallery::imagegallery_index" title="Image Gallery" module="VES_ImageGallery"  sortOrder="10" parent="VES_ImageGallery::imagegallery" resource="VES_ImageGallery::imagegallery_index" />
+        <add id="VES_ImageGallery::imagegallery_image" title="Manager Images" module="VES_ImageGallery"  sortOrder="20" parent="VES_ImageGallery::imagegallery_index" action="imagegallery/image" resource="VES_ImageGallery::imagegallery_image" />
+        <add id="VES_ImageGallery::imagegallery_gallery" title="Manager Gallery" module="VES_ImageGallery"  sortOrder="30" parent="VES_ImageGallery::imagegallery_index" action="imagegallery/gallery" resource="VES_ImageGallery::imagegallery_gallery" />
+        <add id="VES_ImageGallery::imagegallery_group" title="Manager Group" module="VES_ImageGallery"  sortOrder="40" parent="VES_ImageGallery::imagegallery_index" action="imagegallery/group" resource="VES_ImageGallery::imagegallery_group" />
+        <add id="VES_ImageGallery::imagegallery_settings" title="Settings" module="VES_ImageGallery"  sortOrder="50" parent="VES_ImageGallery::imagegallery_index" action="adminhtml/system_config/edit/section/bannergallery" resource="VES_ImageGallery::imagegallery_settings" />
+    </menu>
+</config>

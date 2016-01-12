@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Banner Slider</title>
+        <css src="Tuna_BannerSlider::css/zebra_tooltips.css" />
+        <script src="Tuna_BannerSlider::js/slider-edit-form.js" />
+    </head>
+    <body>
+        <referenceBlock name="menu">
+            <action method="setActive">
+                <argument name="itemId" xsi:type="string">Tuna_BannerSlider::bannerslider</argument>
+            </action>
+        </referenceBlock>
+
+        <referenceContainer name="content">
+            <block class="Tuna\BannerSlider\Block\Adminhtml\Slider\Edit" name="banner_edit" />
+        </referenceContainer>
+
+        <referenceContainer name="left">
+            <block class="Tuna\BannerSlider\Block\Adminhtml\Slider\Edit\Tabs" name="slider_edit_tabs">
+
+                <block class="Tuna\BannerSlider\Block\Adminhtml\Slider\Edit\Tab\Form" name="slider_edit_tab_form" />
+
+                <action method="addTab"><!-- TAB 1 Edit FORM -->
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">slider_edit_tab_form</argument>
+                </action>
+                <action method="addTab"> <!-- TAB 2 Edit FORM -->
+                    <argument name="name" xsi:type="string">banner_section</argument>
+                    <argument name="block" xsi:type="array">
+                        <item name="label" xsi:type="string">Banner of Slider</item>
+                        <item name="title" xsi:type="string">Banner of Slider</item>
+                        <item name="url" xsi:type="helper" helper="Tuna\BannerSlider\Helper\Data::getSliderBannerUrl"></item>
+                        <item name="class" xsi:type="string">ajax</item>
+                    </argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

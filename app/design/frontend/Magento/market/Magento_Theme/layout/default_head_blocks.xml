@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <css src="css/font-awesome.min.css" />
+        <css src="css/styles-m.css" />
+        <css src="css/styles-l.css" media="screen and (min-width: 768px)"/>
+        <css src="css/print.css" media="print" />
+
+        <css src="css/bootstrap.min.css" />
+        <css src="css/bootstrap-theme.min.css" />
+        <css src="css/theme.css" />
+        <!-- <link src="js/jquery-2.1.4.min.js" /> -->
+        <link src="js/jquery-1.8.3.min.js" />
+        <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js" src_type="url" /> -->
+        <link src="js/bootstrap.min.js" />
+    </head>
+</page>

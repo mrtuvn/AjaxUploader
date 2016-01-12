@@ -1,0 +1,253 @@
+<?php //$helper = Mage::helper('core');?>
+<div class="pricing-inner">
+    <div class="container">
+        <div class="row">
+
+            <div class="discount_wrap wrap">
+                <div class="discount30-container col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="discount"><span class="price">$30</span> <strong>Discount</strong> for any Edition of 3 plugins</div>
+                </div>
+                <div class="discount70-container col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="discount"><span class="price">$70</span> <strong>Discount</strong> for any Edition of 5 plugins</div>
+                </div>
+                <div class="discount100-container col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="discount"><span class="price">$100</span> <strong>Discount</strong> for any Edition of 8+ plugins</div>
+                </div>
+            </div>
+
+            <div id="" class="edition_wrap wrap">
+                <div class="edition features col-lg-4">
+                    <div class="edition_head">&nbsp;</div>
+                    <div class="price-wrap">&nbsp;</div>
+                    <div class="edition_content">
+                        <div class="content-inner">
+                            <ul>
+                                <?php $url = $this->getUrl('features')?>
+                                <li><a target="_blank" href="<?php echo $url.'#extension_modes'?>" title="3 different extension modes to make your success marketplace website" class="tooltip-handle">3 Extension Modes</li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_group'?>" title="The marketplace script provides the ability for marketplace owner manages vendors by group." class="tooltip-handle">Vendor Group Management</li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_group'?>" title="You can set commission for each group by percent of any order or fixed amount." class="tooltip-handle">Vendor Commission Management</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#manage_transactions'?>" title="The marketplace owner is able to manage all credit transactions from all vendors." class="tooltip-handle">Vendor Transaction Management</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_credit_account'?>" title="Each vendor will have his own credit account. After a customer pays for an order, the money will be added to vendor credit account. " class="tooltip-handle">Vendor Credit Account</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_credit_account'?>" title="Vendor can withdraw the money from his credit account to his Bank, Paypal,..." class="tooltip-handle">Withdrawal Management</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#manage_vendors'?>" title="The administrator can manage all vendors from magento backend." class="tooltip-handle">Manage Vendors</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#manage_vendor_attributes'?>" title="Marketplace owner can create vendor's custom attributes and vendor will have to fill these attributes on registration page." class="tooltip-handle">Manage Vendor Attributes</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_login'?>" title="The seller login page is different from the admin login page. Vendors will use their vendor identifier or email to login." class="tooltip-handle">Vendor Login</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_register_new_account'?>" title="The marketplace extension allows vendor and sellers to register for an account to start selling products on the marketplace website. You can disable this feature from configuration as well." class="tooltip-handle">Vendor Register New Account</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#admin_approves_vendor_account'?>" title="After a vendor registers for an account on the market place they may need to wait for an admin to approve the account. Admins can disable the vendor account approval from configuration." class="tooltip-handle">Vendor Account Approval</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_responsive_cpanel'?>" title="The Multiple Vendor Marketplace Script allows vendor to manage his products, orders on any device from any where" class="tooltip-handle">Responsive Vendor Cpanel</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_dashboard'?>" title="From dashboard, vendors will have an overview about their store." class="tooltip-handle">Vendor Dashboard</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_manages_products'?>" title="A vendor is able to see and manage his products from vendor control panel. Vendor A can is not able to see and products from vendor B" class="tooltip-handle">Vendor Product Management</a></li>
+                                <li><a href="javascript: void(0);" title="Vendor can add Grouped product type." class="tooltip-handle">Grouped Product</a></li>
+                                <li><a href="javascript: void(0);" title="Vendor can add Configurable product type." class="tooltip-handle">Configurable Product</a></li>
+                                <li><a href="javascript: void(0);" title="Vendor can add Downloadable product type." class="tooltip-handle">Downloadable Product</a></li>
+                                <li><a href="javascript: void(0);" title="Vendor can add Virtual product type." class="tooltip-handle">Virtual Product</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_product_custom_options'?>" title="Vendor can add custom options for his products" class="tooltip-handle">Product Custom options</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#admin_approves_products'?>" title="All newly added products may need to be approved by Admin before it can be published live to the marketplace website." class="tooltip-handle">Vendor Product Approval</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_manages_orders'?>" title="Vendors are allowed to see and manage only their orders. Vendor A can not see orders of vendor B." class="tooltip-handle">Vendor Orders Management</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_manages_shipments'?>" title="Vendors can create shipments for their orders, add comments, add tracking code for their shipments." class="tooltip-handle">Vendor Shipments Management</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_manages_invoices'?>" title="Vendors can create invoices for their pending orders, add comments to the invoices, print invoices." class="tooltip-handle">Vendor Invoices Management</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#vendor_manages_creditmemos'?>" title="Vendors can create creditmemo for their orders, add comments and print credit memos" class="tooltip-handle">Vendor Creditmemo Management</a></li>
+                                <li><a href="javascript: void(0);" title="Vendor can set some configuration from his vendor dashboard." class="tooltip-handle">Vendor Configuration</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#extension_modes'?>" title="The shopping cart can be splitted to multiple carts for each vendor.Customer will need to process checkout for each vendor. This feature is under <strong>Advanced</strong> mode." class="tooltip-handle">Multiple shopping cart for each vendor</a></li>
+                                <li><a target="_blank" href="<?php echo $url.'#extension_modes'?>" title="One shopping cart, one time checkout for all products from all vendors. Order will be splitted to multiple orders for each vendor. This feature is under <strong>Advanced X</strong> mode" class="tooltip-handle">Split order to multiple orders</a></li>
+                                <li><a href="javascript: void(0);" title="The extension is compatible with any magento theme. There is some template/css issues that you may get but don't worry, we will help you to resolve any issues with your theme. Just get the theme which you like." class="tooltip-handle">Support all magento themes</a></li>
+                                <li><a href="javascript: void(0);" title="You can create multiple marketplace website. Each marketplace website can has its own domain, the vendor from website A can not upload products to the website B." class="tooltip-handle">Multiple websites support</a></li>
+                                <li><a href="javascript: void(0);" title="The extension can work with any languages. You can just translate all translation csv files to your language." class="tooltip-handle">Multiple Language Support</a></li>
+                                <li>Customizable</li>
+                                <li>Support</li>
+                                <li>Upgrade</li>
+                                <li><a target="_blank" title="Click to see refund policy" href="<?php echo getUrl('refund-policy')?>" class="tooltip-handle">Money Back Guarantee</a></li>
+
+                                <!-- Advanced features -->
+                                <?php //$category = Mage::getModel('catalog/category')->load(12)?>
+                                <?php
+                                $productCollection = $category->getProductCollection()->addAttributeToSelect('*')->addMinimalPrice()
+                                    ->addFinalPrice()
+                                    ->addTaxPercents()
+                                    ->addUrlRewrite($category->getId());
+                                ?>
+                                <?php foreach($productCollection as $_product):?>
+                                    <li><a href="<?php echo $_product->getProductUrl();?>" target="_blank"><?php echo $_product->getName()=='Content Management System'?'Vendor CMS':$_product->getName()?></a> <div class="right"><?php if($_product->getPrice()>0):?><?php echo $helper->currency($_product->getPrice())?><?php else:?><strong style="color: #FF0000">FREE</strong><?php endif;?> <button onclick="setLocation('<?php echo getAddToCartUrl($_product) ?>')" class="button" title="BUY" type="submit"><span><span>BUY</span></span></button></div></li>
+                                <?php endforeach;?>
+                            </ul>
+                            <div class="price">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="edition standard col-lg-2">
+                    <?php //$_standard_product = Mage::getModel('catalog/product')->load(21)?>
+                    <div class="edition_head">STANDARD EDITION</div>
+                    <div class="price-wrap"><?php echo $helper->currency($_standard_product->getPrice())?></div>
+                    <div class="edition_content">
+                        <div class="content-inner">
+                            <ul>
+                                <li><button type="button" title="<?php echo __('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo getAddToCartUrl($_standard_product) ?>')"><span><span><?php echo __('Add to Cart') ?></span></span></button></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="no">100% Open Source</span></li>
+                                <li><span class="no">Lifetime</span></li>
+                                <li><span class="no">Lifetime</span></li>
+                                <li><span class="no">30 days</span></li>
+                                <?php foreach($productCollection as $_product):?>
+                                    <li>
+                                        <?php if($_product->getData('available_in_standard')):?>
+                                            <span class="yes"></span>
+                                        <?php else:?>
+                                            <span class="no">---</span>
+                                        <?php endif;?>
+                                    </li>
+                                <?php endforeach;?>
+                            </ul>
+                            <div class="price">&nbsp;</div>
+                            <button type="button" title="<?php echo __('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo getAddToCartUrl($_standard_product) ?>')"><span><span><?php echo __('Add to Cart') ?></span></span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edition platinum col-lg-4">
+                    <div class="thumb">&nbsp;</div>
+                    <?php //$platinum_product = Mage::getModel('catalog/product')->load(22)?>
+                    <div class="edition_head">PLATINUM EDITION</div>
+                    <div class="price-wrap"><?php echo $helper->currency($platinum_product->getPrice())?></div>
+                    <div class="edition_content">
+                        <div class="content-inner">
+                            <ul>
+                                <li><button type="button" title="<?php echo __('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo getAddToCartUrl($platinum_product) ?>')"><span><span><?php echo __('Add to Cart') ?></span></span></button></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="no">100% Open Source</span></li>
+                                <li><span class="no">Lifetime</span></li>
+                                <li><span class="no">Lifetime</span></li>
+                                <li><span class="no">30 days</span></li>
+                                <?php foreach($productCollection as $_product):?>
+                                    <li>
+                                        <?php if($_product->getData('available_in_platinum')):?>
+                                            <span class="yes"></span>
+                                        <?php else:?>
+                                            <span class="no">---</span>
+                                        <?php endif;?>
+                                    </li>
+                                <?php endforeach;?>
+                            </ul>
+                            <div class="price">&nbsp;</div>
+                            <button type="button" title="<?php echo __('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo getAddToCartUrl($platinum_product) ?>')"><span><span><?php echo __('Add to Cart') ?></span></span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edition custom col-lg-2">
+                    <?php //$custom_product = Mage::getModel('catalog/product')->load(37)?>
+                    <div class="edition_head">CUSTOM EDITION</div>
+                    <div class="price-wrap"><?php echo $helper->currency($custom_product->getPrice())?></div>
+                    <div class="edition_content">
+                        <div class="content-inner">
+                            <!-- <h2><?php//echo $helper->currency($_product->getPrice())?></h2> -->
+                            <ul>
+                                <li><button type="button" title="<?php echo __('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo getAddToCartUrl($custom_product) ?>')"><span><span><?php echo __('Add to Cart') ?></span></span></button></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="no">---</span></li>
+                                <li><span class="no">---</span></li>
+                                <li><span class="no">---</span></li>
+                                <li><span class="no">---</span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="yes"></span></li>
+                                <li><span class="no">100% Open Source</span></li>
+                                <li><span class="no">Lifetime</span></li>
+                                <li><span class="no">Lifetime</span></li>
+                                <li><span class="no">30 days</span></li>
+                                <?php foreach($productCollection as $_product):?>
+                                    <li>
+                                        <span class="no">---</span>
+                                    </li>
+                                <?php endforeach;?>
+                            </ul>
+                            <div class="price">&nbsp;</div>
+                            <?php //$_product = Mage::getModel('catalog/product')->load(37)?>
+                            <button type="button" title="<?php echo __('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo getAddToCartUrl($custom_product) ?>')"><span><span><?php echo __('Add to Cart') ?></span></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- row end -->
+    </div> <!-- container end -->
+</div> <!-- pricing inner end -->

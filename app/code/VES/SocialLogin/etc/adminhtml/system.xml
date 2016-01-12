@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <!-- tab show in Configuration -->
+        <tab id="ves" translate="label" sortOrder="200">
+            <label>Social Login</label>
+        </tab>
+
+        <section id="sociallogin" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>General configuration</label> <!-- Left Col label -->
+            <tab>ves</tab>
+            <resource>VES_SocialLogin::config_settings</resource>
+            <!-- General settings here -->
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+
+                <label>Enable Social Login</label>
+                <field id="social_enable" translate="label" type="select" sortOrder="1"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="position" translate="label" type="multiselect" sortOrder="2"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Position</label>
+
+                </field>
+
+                <field id="direction" translate="label" type="select" sortOrder="3"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Direction</label>
+
+                </field>
+
+                <field id="number_show" translate="label" type="text" sortOrder="4"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Number buttons</label>
+
+                </field>
+
+
+
+
+            </group>
+
+            <!-- Facebook configuration -->
+            <group id="fblogin" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Facebook Login Configuration</label>
+                <field id="is_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="app_id" translate="label" type="text" sortOrder="2"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>App ID</label>
+
+                </field>
+
+                <field id="app_secret" translate="label" type="text" sortOrder="3"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>App Secret</label>
+
+                </field>
+
+                <field id="is_send_password_to_customer" translate="label" type="select" sortOrder="4"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send Password To Customer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="sort_order" translate="label" type="text" sortOrder="5"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+
+                </field>
+
+
+            </group>
+
+            <!-- Facebook configuration -->
+            <group id="gologin" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Google Login Configuration</label>
+
+                <field id="is_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="client_id" translate="label" type="text" sortOrder="2"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client ID</label>
+
+                </field>
+
+                <field id="secret_key" translate="label" type="text" sortOrder="3"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Secret Key</label>
+
+                </field>
+
+                <field id="redirect_url" translate="label" type="text" sortOrder="4"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect Urls</label>
+
+                </field>
+
+                <field id="is_send_password_to_customer" translate="label" type="select" sortOrder="6"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send Password To Customer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="sort_order" translate="label" type="text" sortOrder="7"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+
+                </field>
+
+            </group>
+
+
+
+        </section>
+
+
+    </system>
+</config>
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="VES_GridUI::view" title="VES" module="VES_GridUI" sortOrder="10" resource="VES_GridUI::view"/>
+        <add id="VES_GridUI::grid" title="VES Grid View" module="VES_GridUI" sortOrder="20" parent="VES_GridUI::view" action="gridui/grid" resource="VES_GridUI::grid"/>
+    </menu>
+</config>

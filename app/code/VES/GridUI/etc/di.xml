@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!--required , important . Grid Collection Data get from model declare here -->
+    <virtualType name="VES\GridUI\Model\ResourceModel\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">ves_gridui_grid</argument>
+            <argument name="resourceModel" xsi:type="string">VES\GridUI\Model\ResourceModel\Grid</argument>
+        </arguments>
+    </virtualType>
+
+    <!--need this for all list grid in module-->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="entity_listing_data_source" xsi:type="string">VES\GridUI\Model\ResourceModel\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+
+    <virtualType name="GridGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">VES\GridUI\Model\ResourceModel\Grid\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">GridGridFilterPool</argument>
+        </arguments>
+    </virtualType>
+
+
+    <virtualType name="GridGridFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+
+
+</config>
