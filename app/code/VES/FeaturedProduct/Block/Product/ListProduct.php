@@ -9,18 +9,23 @@ namespace VES\FeaturedProduct\Block\Product;
 use Magento\Catalog\Api\CategoryRepositoryInterface;
 use Magento\Catalog\Model\Product;
 
-// my additional files
+// some files needs
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Api\Search\FilterGroup;
 
 class ListProduct extends \Magento\Catalog\Block\Product\ListProduct
 {
+
     protected $_productRepository;
-
     protected $_searchCriteria;
-
     protected $_searchCriteriaGroup;
+
+    /**
+     * @var \Magento\Framework\Data\Helper\PostHelper
+     */
+    protected $_postDataHelper;
+
 
     public function __construct(
         \Magento\Catalog\Block\Product\Context $context,
@@ -33,31 +38,35 @@ class ListProduct extends \Magento\Catalog\Block\Product\ListProduct
         FilterGroup $searchCriteriaGroup,
         array $data = []
     ) {
-        $this->_catalogLayer = $layerResolver->get();
-        $this->_postDataHelper = $postDataHelper;
-        $this->categoryRepository = $categoryRepository;
-        $this->urlHelper = $urlHelper;
-        $this->_productRepository = $productRepository; // new injection
-        $this->_searchCriteria  = $searchCriteria; // new injection
-        $this->_searchCriteriaGroup = $searchCriteriaGroup; // new injection
+        $this->_postDataHelper      = $postDataHelper;
+        $this->_catalogLayer        = $layerResolver->get();
+        $this->categoryRepository   = $categoryRepository;
+        $this->urlHelper            = $urlHelper;
         parent::__construct(
             $context,
+            $postDataHelper,
+            $layerResolver,
+            $categoryRepository,
+            $urlHelper,
             $data
-        );
+        ); // Pass all argument to constructor
+
+        $this->_productRepository   = $productRepository; // new injection
+        $this->_searchCriteria      = $searchCriteria; // new injection
+        $this->_searchCriteriaGroup = $searchCriteriaGroup; // new injection
     }
 
     protected function _prepareLayout()
     {
-        $this->setChild(
-            'grid' ,
-            $this->getLayout()->createBlock(
-                'VES\FeaturedProduct\Block\Product\ListProduct',
-                'featuredproduct.block.list'
-            )
-        );
+        $block = $this->getLayout()->createBlock(
+            'VES\FeaturedProduct\Block\Product\ListProduct',
+            'featuredproduct.block.list'
+        )->setCollection($this->_getProductCollection());
+
+        $this->setChild('grid', $block);
 
 
-        return parent::_prepareLayout();
+        return parent::_prepareLayout();//init DOM
     }
 
     /**
@@ -78,7 +87,7 @@ class ListProduct extends \Magento\Catalog\Block\Product\ListProduct
                 ->addAttributeToSelect('price')
                 ->addAttributeToFilter('is_featured', 1)
                 ->addAttributeToFilter('status', 1)
-                ->setPageSize($productCollection->count())
+                ->setPageSize($productCollection->getSize())
                 ->setCurPage(1)
                 ->load();
 
@@ -132,10 +141,6 @@ class ListProduct extends \Magento\Catalog\Block\Product\ListProduct
         $toolbar->setCollection($collection);
 
         $this->setChild('toolbar', $toolbar);
-        $this->_eventManager->dispatch(
-            'catalog_block_product_list_collection',
-            ['collection' => $this->_getProductCollection()]
-        );
 
         $this->_getProductCollection()->load();
 
