@@ -1,1 +1,0 @@
-Module VES_FeaturedProduct

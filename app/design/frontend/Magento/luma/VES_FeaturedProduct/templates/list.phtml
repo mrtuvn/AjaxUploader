@@ -11,6 +11,8 @@ use Magento\Framework\App\Action\Action;
 <?php
 $_productCollection = $block->getLoadedProductCollection();
 $_helper = $this->helper('Magento\Catalog\Helper\Output');
+echo "<pre>";
+var_dump($_productCollection);exit;
 ?>
 <?php if (!$_productCollection->count()): ?>
 	<div class="message info empty"><div><?php /* @escapeNotVerified */ echo __('We can\'t find products matching the selection.') ?></div></div>

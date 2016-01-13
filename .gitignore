@@ -58,4 +58,7 @@ atlassian*
 /app/etc/env.php
 /.idea/
 /*.txt
-
+/*.sql
+/*.zip
+/app/code/*
+!/app/code/VES/AjaxUploader/
